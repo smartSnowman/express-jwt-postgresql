@@ -14,7 +14,7 @@ module.exports = function(app) {
  * /api/v1/rna/test/signin:
  *    post:
  *     summary: Sign in with username and password
- *     description: Sign in with provided username and password
+ *     description: Sign in with provided username and password. Username and password are "admin", "normal" and "limited".
  *     requestBody:
  *       required: true
  *       content:
@@ -24,8 +24,10 @@ module.exports = function(app) {
  *            properties:
  *              username:
  *                type: string
+ *                default: admin
  *              password:
  *                type: string
+ *                default: admin
  *     responses:
  *      '200':
  *        description: Successful sign-in
@@ -36,12 +38,16 @@ module.exports = function(app) {
  *              properties:
  *                id:
  *                  type: string
+ *                  default: 1
  *                username:
  *                  type: string
+ *                  default: admin
  *                roles:
  *                  type: string
+ *                  default: admin
  *                accessToken:
  *                  type: string
+ *                  default: token
  *      '400':
  *        description: User not found
  *        content:

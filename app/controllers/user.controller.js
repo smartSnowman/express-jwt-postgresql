@@ -19,7 +19,7 @@ exports.getLocus = async (req, res) => {
     }
     const { id, assembly_id, membership_status, region_id } = req.query;
     const { sideloading = false } = req.query;
-    const { page = 1, limit = 10 } = req.query;
+    const { page = 1, limit = 1000 } = req.query;
     const { sort = "id", order = "ASC" } = req.query;
     const sortIsValid = sortList.includes(sort);
 
