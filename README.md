@@ -1,6 +1,6 @@
 # RNCLOCUS
 
-This project is a test project for jwt-authentication and postgresql. It is built using **PostgreSQL** and **Node.js**.
+This project is a test project for jwt-authentication and postgresql, swagger. It is built using **PostgreSQL** and **Node.js**, and then swagger for automated openAPI document.
 
 ## Getting Started
 
@@ -36,6 +36,7 @@ To run the backend server, use the following command:
 | GET    | /api/v1/rna/test   | display a message for simle test |
 | POST   | /api/v1/rna/test/signin   | signin with 3 pre-defined users account (admin, normal, limited) |
 | GET    | /api/v1/rna/test/locus  | get locus data with parameters |
+| GET    | /api/v1/rna/test/api-docs  | display automated api document in swagger |
 
 ## Built With
 
