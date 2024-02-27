@@ -15,7 +15,7 @@ exports.getLocus = async (req, res) => {
 
     const roleIsValid = Role.includes(role)
     if (!roleIsValid) {
-      return res.status(500).send({ message: "Invalid Role" });
+      return res.status(400).send({ message: "Invalid Role" });
     }
     const { id, assembly_id, membership_status, region_id } = req.query;
     const { sideloading = false } = req.query;
@@ -72,11 +72,11 @@ exports.getLocus = async (req, res) => {
         return res.status(200).send({ data: filteredData });
       })
       .catch(err => {
-        return res.status(400).send({ message: err.message });
+        return res.status(500).send({ message: err.message });
       });
   }
   catch (err) {
     console.log("error", err)
-    return res.status(400).send({ message: err.message });
+    return res.status(500).send({ message: err.message });
   }
 };

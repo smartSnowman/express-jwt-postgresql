@@ -15,7 +15,7 @@ module.exports = function (app) {
  * /api/v1/rna/test/locus:
  *    get:
  *     summary: Get locus data
- *     description: Retrieve  data based on specified filters
+ *     description: Retrieve  data based on specified filters. Admin can access all columns, normal can access only data from rnc_locus table and cannot use sideloading, limited user can get data only for regionId in (86118093,86696489,88186467)
  *     parameters:  
  *       - in: header
  *         name: x-access-token
@@ -78,7 +78,7 @@ module.exports = function (app) {
  *         description: Sort order (ASC or DESC)
  *     responses:
  *      '200':
- *        description: Successful response with data
+ *        description: Successful response with data. If sideloading is true, rnc_locus_member value will be added in the list.
  *        content:
  *          application/json:
  *            schema:
